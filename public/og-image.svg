@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a0533"/>
+      <stop offset="0.55" stop-color="#3d0a52"/>
+      <stop offset="1" stop-color="#ff5e7a"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff2bd6"/>
+      <stop offset="0.5" stop-color="#ffb15e"/>
+      <stop offset="1" stop-color="#19d3ff"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd86b"/>
+      <stop offset="1" stop-color="#ff2bd6"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <circle cx="600" cy="300" r="150" fill="url(#sun)" opacity="0.85"/>
+  <g fill="#12031f" opacity="0.92">
+    <rect x="120" y="360" width="60" height="180"/>
+    <rect x="200" y="300" width="70" height="240"/>
+    <rect x="290" y="380" width="50" height="160"/>
+    <rect x="900" y="320" width="70" height="220"/>
+    <rect x="990" y="360" width="55" height="180"/>
+    <rect x="1055" y="290" width="65" height="250"/>
+  </g>
+  <text x="600" y="250" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif"
+        font-size="150" fill="url(#txt)" letter-spacing="8">GTA VI</text>
+  <text x="600" y="320" text-anchor="middle" font-family="Inter, sans-serif"
+        font-size="34" fill="#ffffff" opacity="0.9">VICE CITY AWAITS</text>
+  <text x="600" y="560" text-anchor="middle" font-family="JetBrains Mono, monospace"
+        font-size="30" fill="#19d3ff">Live countdown · every second counts</text>
+</svg>

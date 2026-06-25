@@ -1,0 +1,30 @@
+[
+  {
+    "id": "n1",
+    "date": "2026-05-02",
+    "tag": "Update",
+    "title": "Release window reaffirmed",
+    "summary": "Rockstar's parent company reiterates the planned launch window, with all signs pointing to a polished, on-time release."
+  },
+  {
+    "id": "n2",
+    "date": "2025-12-04",
+    "tag": "Trailer",
+    "title": "Second trailer breaks records",
+    "summary": "The follow-up trailer expands on the world and characters, dominating social feeds within hours of going live."
+  },
+  {
+    "id": "n3",
+    "date": "2025-09-18",
+    "tag": "Tech",
+    "title": "Next-gen systems detailed",
+    "summary": "New details emerge on the simulation systems powering crowds, traffic and weather across the state of Leonida."
+  },
+  {
+    "id": "n4",
+    "date": "2023-12-05",
+    "tag": "Reveal",
+    "title": "Vice City returns",
+    "summary": "The first official trailer confirms a return to Vice City and introduces dual protagonists Lucia and Jason."
+  }
+]

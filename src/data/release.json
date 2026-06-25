@@ -1,0 +1,19 @@
+{
+  "title": "Grand Theft Auto VI",
+  "shortTitle": "GTA VI",
+  "tagline": "Vice City Awaits",
+  "releaseDateISO": "2026-11-19T00:00:00Z",
+  "announcementDateISO": "2023-12-04T00:00:00Z",
+  "displayDate": "November 19, 2026",
+  "publisher": "Rockstar Games",
+  "developer": "Rockstar Games",
+  "engine": "RAGE (Rockstar Advanced Game Engine)",
+  "genre": "Action-adventure, Open world",
+  "ageRating": "Mature 17+ (ESRB) / PEGI 18",
+  "setting": "State of Leonida — neon-soaked Vice City",
+  "platforms": ["PlayStation 5", "Xbox Series X|S", "PC"],
+  "gameModes": ["Single-player", "Online (post-launch)"],
+  "protagonists": ["Lucia", "Jason"],
+  "trailerId": "QdBZY2fkU-0",
+  "officialUrl": "https://www.rockstargames.com/VI"
+}

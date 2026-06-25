@@ -1,0 +1,57 @@
+[
+  {
+    "id": "world",
+    "icon": "world",
+    "title": "Massive Open World",
+    "description": "Explore the sprawling state of Leonida — from neon city blocks to sun-bleached beaches and tangled swamps — seamlessly, with no loading walls."
+  },
+  {
+    "id": "graphics",
+    "icon": "graphics",
+    "title": "Next-Gen Graphics",
+    "description": "A ground-up visual overhaul brings ray-traced light, dense crowds and lifelike materials to every neon-drenched street corner."
+  },
+  {
+    "id": "vehicles",
+    "icon": "vehicles",
+    "title": "Vehicles",
+    "description": "Cars, bikes, boats and aircraft are rebuilt with new handling and physics, so every getaway feels tactile and distinct."
+  },
+  {
+    "id": "map",
+    "icon": "map",
+    "title": "The Map",
+    "description": "The most detailed Rockstar map yet weaves dense urban sprawl together with rural backroads, wetlands and open coastline."
+  },
+  {
+    "id": "weather",
+    "icon": "weather",
+    "title": "Dynamic Weather",
+    "description": "Tropical heat, rolling storms and hurricane warnings reshape the world in real time, changing how the city looks and feels."
+  },
+  {
+    "id": "wildlife",
+    "icon": "wildlife",
+    "title": "Living Wildlife",
+    "description": "Alligators lurk in the swamps, flamingos wade the shallows and the ecosystem of Leonida lives and breathes around you."
+  },
+  {
+    "id": "npc",
+    "icon": "npc",
+    "title": "Smarter NPC AI",
+    "description": "A new behavior system gives pedestrians routines, reactions and personalities, making the world feel genuinely alive."
+  },
+  {
+    "id": "story",
+    "icon": "story",
+    "title": "Dual-Protagonist Story",
+    "description": "Follow Lucia and Jason through an intertwined crime saga, switching perspectives across a sprawling, cinematic campaign."
+  },
+  {
+    "id": "online",
+    "icon": "online",
+    "title": "Online Mode",
+    "description": "An evolving multiplayer experience is planned to arrive after launch, expanding Vice City with friends for years to come.",
+    "badge": "Coming Later"
+  }
+]

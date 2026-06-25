@@ -1,0 +1,66 @@
+[
+  {
+    "id": "announcement",
+    "date": "Feb 2022",
+    "title": "Development Confirmed",
+    "description": "Rockstar Games officially confirms that the next entry in the Grand Theft Auto series is well underway.",
+    "status": "done",
+    "icon": "announce"
+  },
+  {
+    "id": "trailer-1",
+    "date": "Dec 2023",
+    "title": "Trailer 1 Reveal",
+    "description": "The first official trailer drops, revealing Vice City, the state of Leonida and dual protagonists Lucia & Jason.",
+    "status": "done",
+    "icon": "trailer"
+  },
+  {
+    "id": "trailer-2",
+    "date": "2025",
+    "title": "Trailer 2",
+    "description": "A second trailer expands on the world, characters and tone — fueling speculation across the community.",
+    "status": "done",
+    "icon": "trailer"
+  },
+  {
+    "id": "gameplay",
+    "date": "2026",
+    "title": "Gameplay Reveal",
+    "description": "Rockstar pulls back the curtain on extended gameplay, mechanics and the systems powering Vice City.",
+    "status": "upcoming",
+    "icon": "gameplay"
+  },
+  {
+    "id": "preorders",
+    "date": "Jun 25, 2026",
+    "title": "Pre-Orders Open",
+    "description": "Pre-orders go live at midnight local time on the PlayStation Store (PS5), Xbox, Rockstar Games Store and retailers. Early buyers get the Vintage Vice City Pack.",
+    "status": "done",
+    "icon": "preorder"
+  },
+  {
+    "id": "preload",
+    "date": "Nov 12, 2026",
+    "title": "Digital Pre-Load",
+    "description": "Players who pre-order digital editions can begin pre-loading the game one week before launch, ready to play the moment it unlocks.",
+    "status": "upcoming",
+    "icon": "preload"
+  },
+  {
+    "id": "release",
+    "date": "Nov 19, 2026",
+    "title": "Launch Day",
+    "description": "Grand Theft Auto VI releases on PlayStation 5 and Xbox Series X|S. The wait is finally over.",
+    "status": "upcoming",
+    "icon": "rocket"
+  },
+  {
+    "id": "dlc",
+    "date": "Beyond",
+    "title": "Online & Future DLC",
+    "description": "Online multiplayer and ongoing content updates arrive after launch, extending life in Vice City for years.",
+    "status": "future",
+    "icon": "future"
+  }
+]

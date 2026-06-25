@@ -1,0 +1,59 @@
+[
+  {
+    "id": "g1",
+    "type": "screenshot",
+    "title": "Vice Beach at Dusk",
+    "caption": "Golden hour rolls over the boardwalk.",
+    "gradient": ["#ff7e5f", "#ff2bd6", "#9b5cff"]
+  },
+  {
+    "id": "g2",
+    "type": "artwork",
+    "title": "Lucia — Key Art",
+    "caption": "Official-style character key art.",
+    "gradient": ["#9b5cff", "#5c2bff", "#19d3ff"]
+  },
+  {
+    "id": "g3",
+    "type": "video",
+    "title": "Reveal Trailer",
+    "caption": "Watch the official reveal trailer.",
+    "youtubeId": "QdBZY2fkU-0",
+    "gradient": ["#ff2bd6", "#3d0a52", "#19d3ff"]
+  },
+  {
+    "id": "g4",
+    "type": "screenshot",
+    "title": "Neon Downtown",
+    "caption": "City lights stretch to the horizon.",
+    "gradient": ["#19d3ff", "#9b5cff", "#ff2bd6"]
+  },
+  {
+    "id": "g5",
+    "type": "wallpaper",
+    "title": "Palms & Sunset 4K",
+    "caption": "Wallpaper preview — tap to expand.",
+    "gradient": ["#ffb15e", "#ff2bd6", "#5c2bff"]
+  },
+  {
+    "id": "g6",
+    "type": "artwork",
+    "title": "Jason — Key Art",
+    "caption": "Official-style character key art.",
+    "gradient": ["#5c2bff", "#19d3ff", "#1affc6"]
+  },
+  {
+    "id": "g7",
+    "type": "screenshot",
+    "title": "Everglades Run",
+    "caption": "Airboats cut through the wetlands.",
+    "gradient": ["#1affc6", "#19d3ff", "#9b5cff"]
+  },
+  {
+    "id": "g8",
+    "type": "wallpaper",
+    "title": "Vice City Skyline 4K",
+    "caption": "Wallpaper preview — tap to expand.",
+    "gradient": ["#ff2bd6", "#ffb15e", "#ffd86b"]
+  }
+]
