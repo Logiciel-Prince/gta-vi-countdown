@@ -53,6 +53,25 @@ Everything is data-driven — edit the JSON, no code changes needed:
 
 To change the **target date**, edit `releaseDateISO` in `src/data/release.json`. When it passes, the timer auto-swaps to “🎉 GTA VI is out now!”.
 
+## ▲ Deploying to Vercel
+
+The repo ships with `vercel.json` (Vite preset, SPA rewrite, immutable asset caching, and a non-cached service worker so PWA updates propagate). Build settings are auto-detected; no dashboard config needed.
+
+**Option A — Dashboard (recommended):**
+1. Push this folder to a Git repo (GitHub/GitLab/Bitbucket).
+2. In Vercel → **Add New → Project**, import the repo.
+3. Framework: **Vite** · Build: `npm run build` · Output: `dist` (all auto-detected). Click **Deploy**.
+
+**Option B — CLI:**
+```bash
+npm i -g vercel
+vercel login
+vercel          # preview deploy
+vercel --prod   # production deploy
+```
+
+After your first deploy, update the absolute URLs in `index.html` (OpenGraph/Twitter/canonical), `public/sitemap.xml`, and `public/robots.txt` from `https://gta6-countdown.example.com` to your real Vercel domain so social cards and SEO resolve correctly.
+
 ## 📁 Structure
 
 ```
