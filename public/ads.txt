@@ -1,0 +1,5 @@
+# ads.txt — authorizes Google AdSense to sell ads on this site.
+# Replace pub-0000000000000000 with YOUR publisher ID (the digits shown in
+# your AdSense account, e.g. ca-pub-1234567890123456 -> pub-1234567890123456).
+# After editing, redeploy. Verify it loads at https://YOUR-DOMAIN/ads.txt
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

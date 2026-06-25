@@ -39,6 +39,15 @@ export function Footer() {
           “Grand Theft Auto”, “GTA” and all related marks are trademarks of their
           respective owners. No official assets are used.
         </p>
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-muted/70">
+          <a href="/privacy.html" className="transition-colors hover:text-accent">
+            Privacy Policy
+          </a>
+          <span aria-hidden>·</span>
+          <a href={release.officialUrl} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
+            Official Rockstar Site
+          </a>
+        </div>
         <p className="text-xs text-muted/60">
           © {new Date().getFullYear()} GTA VI Countdown · Made with neon &amp; nostalgia.
         </p>

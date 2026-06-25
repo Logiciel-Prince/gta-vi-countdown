@@ -15,6 +15,8 @@ import { FunFacts } from './components/sections/FunFacts'
 import { Quotes } from './components/sections/Quotes'
 import { WallpaperShuffle } from './components/sections/WallpaperShuffle'
 import { Faq } from './components/sections/Faq'
+import { AdSenseLoader } from './components/ads/AdSense'
+import { AdCard } from './components/ads/AdCard'
 import { useCountdown } from './hooks/useCountdown'
 import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts'
 import { useTheme } from './context/ThemeContext'
@@ -59,6 +61,7 @@ export function App() {
   return (
     <>
       <ScrollProgressBar />
+      <AdSenseLoader />
       <Navbar />
       <ShortcutHint />
 
@@ -67,8 +70,12 @@ export function App() {
         {fadeIn(<CountdownSection timeLeft={timeLeft} />)}
         <LatestInfo />
         <Features />
+        {/* Manual ad slot — replace "1111111111" with a real slot ID, or rely on Auto Ads */}
+        <AdCard slot="1111111111" className="py-6" />
         <TrailerSection />
         <Gallery />
+        {/* Manual ad slot — replace "2222222222" with a real slot ID, or rely on Auto Ads */}
+        <AdCard slot="2222222222" className="py-6" />
         <Timeline />
         <FunFacts />
         <WallpaperShuffle />

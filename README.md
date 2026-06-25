@@ -72,6 +72,18 @@ vercel --prod   # production deploy
 
 After your first deploy, update the absolute URLs in `index.html` (OpenGraph/Twitter/canonical), `public/sitemap.xml`, and `public/robots.txt` from `https://gta6-countdown.example.com` to your real Vercel domain so social cards and SEO resolve correctly.
 
+## 💰 Google AdSense
+
+Ads are wired but **off until you provide a publisher ID** (so the live site is never cluttered with empty ad frames). To enable:
+
+1. Get approved at [adsense.google.com](https://adsense.google.com) and copy your publisher ID (`ca-pub-…`).
+2. In Vercel → **Settings → Environment Variables**, add `VITE_ADSENSE_CLIENT = ca-pub-XXXXXXXXXXXXXXXX`, then **redeploy**.
+3. Edit `public/ads.txt` — replace `pub-0000000000000000` with your ID — and redeploy.
+4. **Easiest:** in AdSense, turn on **Auto Ads** for the site. Google places ads automatically; no slot IDs needed.
+5. **Optional (manual control):** create ad units in AdSense, then replace the placeholder slot IDs in `src/App.tsx` (`<AdCard slot="…">`). Or delete those `<AdCard>` lines if you only want Auto Ads.
+
+The loader (`src/components/ads/AdSense.tsx`) only injects Google's script when `VITE_ADSENSE_CLIENT` is set. A privacy policy (required by AdSense) lives at `public/privacy.html`, linked from the footer.
+
 ## 📁 Structure
 
 ```
