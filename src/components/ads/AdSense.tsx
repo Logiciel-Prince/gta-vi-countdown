@@ -9,7 +9,8 @@ import { ADSENSE_CLIENT, adsEnabled, isRealSlot } from '../../config/ads'
 export function AdSenseLoader() {
   useEffect(() => {
     if (!adsEnabled) return
-    if (document.querySelector('script[data-adsense-loader]')) return
+    // The script is already in index.html <head>; only inject as a fallback.
+    if (document.querySelector('script[src*="adsbygoogle.js"]')) return
     const s = document.createElement('script')
     s.async = true
     s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`

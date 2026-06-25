@@ -8,7 +8,10 @@
  * When VITE_ADSENSE_CLIENT is unset, the site renders with no ads at all
  * (and shows labeled placeholders only during local development).
  */
-export const ADSENSE_CLIENT = (import.meta.env.VITE_ADSENSE_CLIENT as string | undefined)?.trim()
+const DEFAULT_CLIENT = 'ca-pub-2451118269373873'
+
+export const ADSENSE_CLIENT =
+  (import.meta.env.VITE_ADSENSE_CLIENT as string | undefined)?.trim() || DEFAULT_CLIENT
 
 /** True once a publisher ID is configured. */
 export const adsEnabled = Boolean(ADSENSE_CLIENT && ADSENSE_CLIENT.startsWith('ca-pub-'))
