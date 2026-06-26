@@ -1,8 +1,14 @@
 [
-  { "id": "w1", "name": "Sunset Strip", "gradient": ["#ff7e5f", "#ff2bd6", "#9b5cff"] },
-  { "id": "w2", "name": "Neon Nights", "gradient": ["#19d3ff", "#5c2bff", "#ff2bd6"] },
-  { "id": "w3", "name": "Miami Heat", "gradient": ["#ffd86b", "#ff7e5f", "#ff2bd6"] },
-  { "id": "w4", "name": "Synthwave Dawn", "gradient": ["#9b5cff", "#ff2bd6", "#ffb15e"] },
-  { "id": "w5", "name": "Ocean Drive", "gradient": ["#1affc6", "#19d3ff", "#5c2bff"] },
-  { "id": "w6", "name": "Vice Purple", "gradient": ["#5c2bff", "#9b5cff", "#ff2bd6"] }
+  { "id": "w1", "name": "Sunset Strip", "image": "/gallery/wp-sunset-strip.jpg", "gradient": ["#ff7e5f", "#ff2bd6", "#9b5cff"] },
+  { "id": "w2", "name": "Neon Nights", "image": "/gallery/wp-neon-nights.jpg", "gradient": ["#19d3ff", "#5c2bff", "#ff2bd6"] },
+  { "id": "w3", "name": "Miami Heat", "image": "/gallery/wp-miami-heat.jpg", "gradient": ["#ffd86b", "#ff7e5f", "#ff2bd6"] },
+  { "id": "w4", "name": "Synthwave Dawn", "image": "/gallery/wp-synthwave-dawn.jpg", "gradient": ["#9b5cff", "#ff2bd6", "#ffb15e"] },
+  { "id": "w5", "name": "Ocean Drive", "image": "/gallery/wp-ocean-drive.jpg", "gradient": ["#1affc6", "#19d3ff", "#5c2bff"] },
+  { "id": "w6", "name": "Vice Purple", "image": "/gallery/wp-vice-purple.jpg", "gradient": ["#5c2bff", "#9b5cff", "#ff2bd6"] },
+  { "id": "w7", "name": "Sunset Cruiser", "image": "/gallery/wp-sunset-cruiser.jpg", "gradient": ["#ff7e5f", "#ff2bd6", "#5c2bff"] },
+  { "id": "w8", "name": "Night Rider", "image": "/gallery/wp-night-rider.jpg", "gradient": ["#19d3ff", "#5c2bff", "#0a0118"] },
+  { "id": "w9", "name": "After Hours", "image": "/gallery/wp-after-hours.jpg", "gradient": ["#9b5cff", "#ff2bd6", "#19d3ff"] },
+  { "id": "w10", "name": "Backstreet Heat", "image": "/gallery/wp-backstreet.jpg", "gradient": ["#ffb15e", "#ff2bd6", "#9b5cff"] },
+  { "id": "w11", "name": "Art Deco Row", "image": "/gallery/wp-art-deco.jpg", "gradient": ["#1affc6", "#19d3ff", "#ff2bd6"] },
+  { "id": "w12", "name": "Leonida Coast", "image": "/gallery/wp-leonida-coast.jpg", "gradient": ["#19d3ff", "#1affc6", "#ffd86b"] }
 ]

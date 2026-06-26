@@ -28,27 +28,65 @@ interface AdUnitProps {
   responsive?: boolean
   className?: string
   style?: React.CSSProperties
+  /** Reports whether AdSense actually filled this slot with an ad. */
+  onStatusChange?: (filled: boolean) => void
 }
 
 /**
  * A single manual display ad. Renders the real <ins> unit only when both a
  * publisher ID and a real (numeric) slot ID are present. Otherwise it shows
- * a labeled placeholder during development and nothing in production — so the
- * live site is never cluttered with empty ad frames before you're approved.
+ * a labeled placeholder during development and nothing in production.
+ *
+ * It watches AdSense's `data-ad-status` and reports back via `onStatusChange`
+ * so the parent can collapse the slot when no ad is served ("unfilled").
  */
-export function AdUnit({ slot, format = 'auto', responsive = true, className, style }: AdUnitProps) {
+export function AdUnit({
+  slot,
+  format = 'auto',
+  responsive = true,
+  className,
+  style,
+  onStatusChange,
+}: AdUnitProps) {
+  const insRef = useRef<HTMLModElement>(null)
   const pushed = useRef(false)
   const configured = adsEnabled && isRealSlot(slot)
 
   useEffect(() => {
-    if (!configured || pushed.current) return
-    try {
-      ;(window.adsbygoogle = window.adsbygoogle || []).push({})
-      pushed.current = true
-    } catch {
-      /* AdSense not ready yet — it will retry on next load */
+    if (!configured) return
+    const ins = insRef.current
+    if (!ins) return
+
+    if (!pushed.current) {
+      try {
+        ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+        pushed.current = true
+      } catch {
+        /* AdSense not ready yet — it will retry on next load */
+      }
     }
-  }, [configured])
+
+    const report = () => {
+      const status = ins.getAttribute('data-ad-status')
+      if (status === 'filled') onStatusChange?.(true)
+      else if (status === 'unfilled') onStatusChange?.(false)
+    }
+    report()
+
+    const observer = new MutationObserver(report)
+    observer.observe(ins, { attributes: true, attributeFilter: ['data-ad-status'] })
+
+    // Backstop: if AdSense never fills (e.g. not approved, blocked, no demand),
+    // treat the slot as empty so the container can collapse.
+    const timer = window.setTimeout(() => {
+      if (ins.getAttribute('data-ad-status') !== 'filled') onStatusChange?.(false)
+    }, 4000)
+
+    return () => {
+      observer.disconnect()
+      window.clearTimeout(timer)
+    }
+  }, [configured, onStatusChange])
 
   if (!configured) {
     if (!import.meta.env.DEV) return null
@@ -63,6 +101,7 @@ export function AdUnit({ slot, format = 'auto', responsive = true, className, st
 
   return (
     <ins
+      ref={insRef}
       className={`adsbygoogle block ${className ?? ''}`}
       style={{ display: 'block', ...style }}
       data-ad-client={ADSENSE_CLIENT}

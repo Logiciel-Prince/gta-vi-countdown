@@ -76,4 +76,5 @@ export interface Wallpaper {
   id: string
   name: string
   gradient: string[]
+  image?: string
 }

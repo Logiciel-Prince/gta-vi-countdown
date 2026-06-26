@@ -27,9 +27,21 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,jpg,jpeg,ico,woff2}'],
-        maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
+        // Precache the app shell only (JS/CSS/HTML/icons/fonts). Photos are
+        // cached on first view via runtimeCaching below, so the initial
+        // install stays small instead of pulling every gallery image up front.
+        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
         runtimeCaching: [
+          {
+            // Gallery + wallpaper photos: cache after first view, work offline thereafter.
+            urlPattern: /\/gallery\/.*\.(?:jpe?g|png)$/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'gallery-images',
+              expiration: { maxEntries: 40, maxAgeSeconds: 60 * 60 * 24 * 30 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
           {
             urlPattern: /^https:\/\/i\.ytimg\.com\/.*/i,
             handler: 'CacheFirst',

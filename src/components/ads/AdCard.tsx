@@ -1,3 +1,4 @@
+import { useCallback, useState } from 'react'
 import { adsEnabled, isRealSlot } from '../../config/ads'
 import { AdUnit } from './AdSense'
 
@@ -9,11 +10,20 @@ interface AdCardProps {
 /**
  * A tasteful, on-brand container for a manual ad unit: a centered glass card
  * with a small "Advertisement" label (required by AdSense policy — ads must
- * be clearly distinguishable from content). Renders nothing in production
- * until a real publisher ID + slot are configured, so it never leaves a gap.
+ * be clearly distinguishable from content).
+ *
+ * The whole card is removed when there's no ad to show — either because it's
+ * not configured, or because AdSense reported the slot as "unfilled" — so the
+ * page never shows an empty advertisement frame. (In local development the
+ * placeholder is always shown so you can see where ads will appear.)
  */
 export function AdCard({ slot, className }: AdCardProps) {
-  if (!import.meta.env.DEV && !(adsEnabled && isRealSlot(slot))) return null
+  const [unfilled, setUnfilled] = useState(false)
+  const handleStatus = useCallback((filled: boolean) => setUnfilled(!filled), [])
+
+  const configured = adsEnabled && isRealSlot(slot)
+
+  if (!import.meta.env.DEV && (!configured || unfilled)) return null
 
   return (
     <div className={`mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8 ${className ?? ''}`}>
@@ -22,7 +32,7 @@ export function AdCard({ slot, className }: AdCardProps) {
           Advertisement
         </span>
         <div className="pt-5">
-          <AdUnit slot={slot} />
+          <AdUnit slot={slot} onStatusChange={handleStatus} />
         </div>
       </div>
     </div>
