@@ -4,13 +4,15 @@
     "type": "screenshot",
     "title": "Vice Beach at Dusk",
     "caption": "Golden hour rolls over the boardwalk.",
+    "image": "/gallery/beach-dusk.jpg",
     "gradient": ["#ff7e5f", "#ff2bd6", "#9b5cff"]
   },
   {
     "id": "g2",
     "type": "artwork",
-    "title": "Lucia — Key Art",
-    "caption": "Official-style character key art.",
+    "title": "Neon Nights",
+    "caption": "The city glows after dark.",
+    "image": "/gallery/neon-nights.jpg",
     "gradient": ["#9b5cff", "#5c2bff", "#19d3ff"]
   },
   {
@@ -26,6 +28,7 @@
     "type": "screenshot",
     "title": "Neon Downtown",
     "caption": "City lights stretch to the horizon.",
+    "image": "/gallery/neon-downtown.jpg",
     "gradient": ["#19d3ff", "#9b5cff", "#ff2bd6"]
   },
   {
@@ -33,20 +36,23 @@
     "type": "wallpaper",
     "title": "Palms & Sunset 4K",
     "caption": "Wallpaper preview — tap to expand.",
+    "image": "/gallery/palms-sunset.jpg",
     "gradient": ["#ffb15e", "#ff2bd6", "#5c2bff"]
   },
   {
     "id": "g6",
     "type": "artwork",
-    "title": "Jason — Key Art",
-    "caption": "Official-style character key art.",
+    "title": "Midnight Cruiser",
+    "caption": "Chrome and color under the streetlights.",
+    "image": "/gallery/midnight-cruiser.jpg",
     "gradient": ["#5c2bff", "#19d3ff", "#1affc6"]
   },
   {
     "id": "g7",
     "type": "screenshot",
-    "title": "Everglades Run",
-    "caption": "Airboats cut through the wetlands.",
+    "title": "Neon Boulevard",
+    "caption": "Rain-slick streets and electric signs.",
+    "image": "/gallery/neon-boulevard.jpg",
     "gradient": ["#1affc6", "#19d3ff", "#9b5cff"]
   },
   {
@@ -54,6 +60,7 @@
     "type": "wallpaper",
     "title": "Vice City Skyline 4K",
     "caption": "Wallpaper preview — tap to expand.",
+    "image": "/gallery/skyline-night.jpg",
     "gradient": ["#ff2bd6", "#ffb15e", "#ffd86b"]
   }
 ]

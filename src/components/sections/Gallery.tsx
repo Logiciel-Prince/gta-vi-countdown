@@ -74,10 +74,21 @@ export function Gallery() {
                 item.type === 'wallpaper' ? 'col-span-2 aspect-[16/9]' : 'aspect-square'
               }`}
             >
-              <PlaceholderArt
-                gradient={item.gradient}
-                iconName={item.type === 'video' ? 'play' : item.type}
-              />
+              {(() => {
+                const tileImage =
+                  item.image ??
+                  (item.type === 'video' && item.youtubeId
+                    ? `https://i.ytimg.com/vi/${item.youtubeId}/hqdefault.jpg`
+                    : undefined)
+                return (
+                  <PlaceholderArt
+                    gradient={item.gradient}
+                    image={tileImage}
+                    alt={item.title}
+                    iconName={tileImage ? undefined : item.type === 'video' ? 'play' : item.type}
+                  />
+                )
+              })()}
               <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 via-transparent p-3">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-neon-blue">
                   {item.type}
@@ -105,7 +116,9 @@ export function Gallery() {
               <div className="aspect-video w-full">
                 <PlaceholderArt
                   gradient={selected.gradient}
-                  iconName={selected.type}
+                  image={selected.image}
+                  alt={selected.title}
+                  iconName={selected.image ? undefined : selected.type}
                   label={selected.type}
                 />
               </div>

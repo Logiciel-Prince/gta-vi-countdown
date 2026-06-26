@@ -60,6 +60,7 @@ export interface GalleryItem {
   title: string
   caption: string
   gradient: string[]
+  image?: string
   youtubeId?: string
 }
 
